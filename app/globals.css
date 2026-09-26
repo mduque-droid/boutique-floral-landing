@@ -11,6 +11,15 @@ body {
   overflow-x: hidden;
 }
 
+/* Ocultar scrollbar en carruseles horizontales */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 /* Scrollbar sutil en la paleta de marca */
 ::-webkit-scrollbar {
   width: 10px;
