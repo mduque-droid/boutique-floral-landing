@@ -33,11 +33,19 @@ export const site = {
 // ----------------------------------------------------------------------------
 //  NAVEGACIÓN
 // ----------------------------------------------------------------------------
+// Menú móvil (completo)
 export const navLinks = [
   { label: "Inicio", href: "#inicio" },
   { label: "Catálogo", href: "#catalogo" },
   { label: "Clientes felices", href: "#clientes" },
   { label: "Preguntas", href: "#faq" },
+  { label: "Contacto", href: "#contacto" },
+];
+
+// Menú del header en desktop (reducido para no recargar)
+export const headerLinks = [
+  { label: "Catálogo", href: "#catalogo" },
+  { label: "Clientes", href: "#clientes" },
   { label: "Contacto", href: "#contacto" },
 ];
 

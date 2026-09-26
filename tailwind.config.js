@@ -19,8 +19,8 @@ module.exports = {
         gold: "#D4AF37", // Dorado tenue (accent)
       },
       fontFamily: {
-        serif: ["var(--font-playfair)", "Georgia", "serif"],
-        sans: ["var(--font-jakarta)", "system-ui", "sans-serif"],
+        serif: ["var(--font-serif)", "Georgia", "serif"],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       keyframes: {
         "fade-up": {

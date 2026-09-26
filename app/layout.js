@@ -1,16 +1,19 @@
-import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
+import { Cormorant_Garamond, Montserrat } from "next/font/google";
 import "./globals.css";
 import { site } from "@/config/site";
 
-const playfair = Playfair_Display({
+// Serif elegante para títulos (marca floral premium)
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  weight: ["500", "600", "700"],
+  variable: "--font-serif",
   display: "swap",
 });
 
-const jakarta = Plus_Jakarta_Sans({
+// Sans familiar y confiable para el público de Colombia/LatAm
+const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-jakarta",
+  variable: "--font-sans",
   display: "swap",
 });
 
@@ -38,7 +41,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es-CO" className={`${playfair.variable} ${jakarta.variable}`}>
+    <html lang="es-CO" className={`${cormorant.variable} ${montserrat.variable}`}>
       <body>{children}</body>
     </html>
   );

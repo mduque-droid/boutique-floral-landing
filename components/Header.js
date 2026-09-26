@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { site, navLinks } from "@/config/site";
+import { site, navLinks, headerLinks } from "@/config/site";
 import { waGeneralLink } from "@/lib/whatsapp";
 import { WhatsAppButton } from "./CtaButtons";
 
@@ -38,9 +38,9 @@ export default function Header() {
           </span>
         </a>
 
-        {/* Navegación desktop */}
-        <nav className="hidden items-center gap-5 lg:flex xl:gap-8">
-          {navLinks.map((link) => (
+        {/* Navegación desktop (reducida) */}
+        <nav className="hidden items-center gap-8 lg:flex">
+          {headerLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
