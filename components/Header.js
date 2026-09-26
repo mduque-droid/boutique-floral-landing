@@ -25,9 +25,9 @@ export default function Header() {
           : "border-transparent bg-ivory/80"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         {/* Logo */}
-        <a href="#inicio" className="flex items-center gap-2">
+        <a href="#inicio" className="flex shrink-0 items-center gap-2">
           <img
             src={site.logo}
             alt={site.name}
@@ -39,12 +39,12 @@ export default function Header() {
         </a>
 
         {/* Navegación desktop */}
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-5 lg:flex xl:gap-8">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-sage-dark transition-colors hover:text-gold"
+              className="whitespace-nowrap text-sm font-medium text-sage-dark transition-colors hover:text-gold"
             >
               {link.label}
             </a>
@@ -52,8 +52,8 @@ export default function Header() {
         </nav>
 
         {/* CTA desktop */}
-        <div className="hidden lg:block">
-          <WhatsAppButton href={waGeneralLink()} size="sm">
+        <div className="hidden shrink-0 lg:block">
+          <WhatsAppButton href={waGeneralLink()} size="sm" className="whitespace-nowrap">
             Pedir por WhatsApp
           </WhatsAppButton>
         </div>
