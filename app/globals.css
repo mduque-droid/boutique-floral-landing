@@ -8,6 +8,7 @@ html {
 
 body {
   @apply bg-ivory text-sage-dark antialiased;
+  overflow-x: hidden;
 }
 
 /* Scrollbar sutil en la paleta de marca */

@@ -10,43 +10,46 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative overflow-hidden bg-gradient-to-b from-blush/60 via-ivory to-ivory pt-28 pb-20 sm:pt-32 lg:pt-40"
+      className="relative overflow-hidden bg-gradient-to-b from-blush/60 via-ivory to-ivory pt-24 pb-16 sm:pt-32 sm:pb-20 lg:pt-40"
     >
       {/* Decoración */}
       <div className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-sage/10 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-gold/10 blur-3xl" />
 
-      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-12 lg:px-8">
         {/* Texto */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
+          className="text-center lg:text-left"
         >
-          <span className="inline-flex items-center gap-2 rounded-full bg-sage/10 px-4 py-1.5 text-sm font-medium text-sage">
+          <span className="inline-flex items-center gap-2 rounded-full bg-sage/10 px-4 py-1.5 text-xs font-medium text-sage sm:text-sm">
             <MapPin className="h-4 w-4" />
             Entregas en {site.city}
           </span>
 
-          <h1 className="mt-6 font-serif text-4xl font-bold leading-tight text-sage-dark sm:text-5xl lg:text-6xl">
+          <h1 className="mt-6 font-serif text-3xl font-bold leading-tight text-sage-dark sm:text-5xl lg:text-6xl">
             Flores que dicen lo que las palabras no alcanzan
           </h1>
 
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-sage-dark/80">
+          <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-sage-dark/80 sm:mt-6 sm:text-lg lg:mx-0">
             Arreglos florales artesanales con <strong>entrega el mismo día</strong> en
             Medellín, El Poblado, Envigado y todo el Oriente Antioqueño. Sorprende a
             quien amas hoy mismo.
           </p>
 
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <WhatsAppButton href={waGeneralLink()} size="lg">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4 lg:justify-start">
+            <WhatsAppButton href={waGeneralLink()} size="lg" className="w-full sm:w-auto">
               Pedir por WhatsApp
             </WhatsAppButton>
-            <CallButton size="lg">Llamar ahora</CallButton>
+            <CallButton size="lg" className="w-full sm:w-auto">
+              Llamar ahora
+            </CallButton>
           </div>
 
           {/* Prueba social */}
-          <div className="mt-8 flex items-center gap-3">
+          <div className="mt-8 flex items-center justify-center gap-3 lg:justify-start">
             <div className="flex text-gold">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="h-5 w-5 fill-current" />
@@ -65,7 +68,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="relative"
         >
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-2xl">
+          <div className="relative mx-auto aspect-[4/3] max-w-md overflow-hidden rounded-3xl shadow-2xl sm:aspect-[4/5] lg:max-w-none lg:rounded-[2rem]">
             <img
               src={site.heroImage}
               alt="Arreglo floral de Boutique Floral"

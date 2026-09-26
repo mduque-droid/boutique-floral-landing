@@ -29,9 +29,11 @@ export default function Header() {
           <img
             src={site.logo}
             alt={site.name}
-            className="h-11 w-11 rounded-full object-cover shadow-sm ring-1 ring-gold/40"
+            className="h-9 w-9 rounded-full object-cover shadow-sm ring-1 ring-gold/40 sm:h-11 sm:w-11"
           />
-          <span className="font-serif text-xl font-bold text-sage">{site.name}</span>
+          <span className="font-serif text-lg font-bold text-sage sm:text-xl">
+            {site.name}
+          </span>
         </a>
 
         {/* Navegación desktop */}
