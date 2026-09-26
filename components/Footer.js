@@ -5,6 +5,26 @@ import { site } from "@/config/site";
 import { waGeneralLink, telLink } from "@/lib/whatsapp";
 import { WhatsAppButton, WhatsAppIcon } from "./CtaButtons";
 
+// Banderitas en SVG (nítidas a cualquier tamaño)
+function FlagColombia({ className = "h-4 w-6" }) {
+  return (
+    <svg viewBox="0 0 6 4" className={`rounded-sm ${className}`} aria-label="Colombia">
+      <rect width="6" height="4" fill="#CE1126" />
+      <rect width="6" height="3" fill="#003893" />
+      <rect width="6" height="2" fill="#FCD116" />
+    </svg>
+  );
+}
+
+function FlagAntioquia({ className = "h-4 w-6" }) {
+  return (
+    <svg viewBox="0 0 6 4" className={`rounded-sm ${className}`} aria-label="Antioquia">
+      <rect width="6" height="4" fill="#009739" />
+      <rect width="6" height="2" fill="#FFFFFF" />
+    </svg>
+  );
+}
+
 export default function Footer() {
   return (
     <footer id="contacto" className="bg-sage-dark text-white">
@@ -87,7 +107,18 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white/10 pt-6 text-center text-xs text-white/50">
+        {/* Sello local paisa */}
+        <div className="mt-12 flex flex-col items-center gap-3 border-t border-white/10 pt-8">
+          <div className="flex items-center gap-3">
+            <FlagColombia className="h-5 w-8 shadow-sm ring-1 ring-white/20" />
+            <FlagAntioquia className="h-5 w-8 shadow-sm ring-1 ring-white/20" />
+          </div>
+          <p className="text-center text-sm font-medium text-white/80">
+            Hechos con amor paisa 💚 · Orgullosamente de Medellín, Antioquia
+          </p>
+        </div>
+
+        <div className="mt-8 border-t border-white/10 pt-6 text-center text-xs text-white/50">
           <p>
             © {new Date().getFullYear()} {site.name}. Todos los derechos reservados. ·
             Pagos con Nequi y Bancolombia.
